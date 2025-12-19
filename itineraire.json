@@ -1,0 +1,273 @@
+{
+  "pays": "États-Unis",
+  "drapeau": "🇺🇸",
+  "symbole": "🦅",
+  "titre": "Immersion Hivernale au Cœur du Dakota du Sud",
+  "budget_total": "2860€",
+  "duree": "7 jours",
+  "date_debut": "2026-01-17",
+  "date_fin": "2026-01-24",
+  "temps_vol": "Environ 15h depuis Foucheres (via Paris CDG) avec 2 escales",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Arrivée à Yankton et Premiers Pas Hivernaux",
+      "legende": "Après un long voyage, l'arrivée à Sioux Falls marque le début de votre aventure dans le Dakota du Sud. Une fois votre voiture de location récupérée, la route vers Yankton vous mènera à votre hôtel. Profitez de cette première soirée pour vous installer et découvrir l'ambiance paisible de cette ville bordant le majestueux fleuve Missouri, sous un manteau hivernal.",
+      "lieu": "Yankton",
+      "activites": [
+        "🛬 <strong>Arrivée à Sioux Falls (FSD) et Transfert</strong>: Atterrissez à l'aéroport de Sioux Falls, récupérez votre véhicule de location et prenez la route vers Yankton (environ 1h30 de trajet), votre base pour ce séjour.",
+        "🛏️ <strong>Installation à l'Hôtel et Détente</strong>: Installez-vous confortablement dans votre hôtel 3 étoiles à Yankton. Prenez le temps de vous reposer après le vol et de vous familiariser avec les environs immédiats.",
+        "🚶‍♂️ <strong>Balade Légère sur le Riverwalk de Yankton</strong>: Profitez d'une courte promenade le long du \"Riverwalk\" de Yankton, offrant des vues sereines sur le fleuve Missouri, même en hiver. L'air frais et le calme sont parfaits pour se dégourdir les jambes."
+      ],
+      "illustration": "jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "🚗",
+          "titre": "Location de voiture",
+          "texte": "Une voiture est indispensable pour explorer cette région peu desservie par les transports en commun. Prévoyez un véhicule adapté aux conditions hivernales."
+        },
+        {
+          "symbole": "🌡️",
+          "titre": "Vêtements Chauds",
+          "texte": "Janvier au Dakota du Sud est très froid. Emportez des couches de vêtements, un manteau épais, des gants, un bonnet et des chaussures imperméables."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "❄️",
+      "titre": "Cœur de Gayville et Majesté du Missouri",
+      "legende": "Aujourd'hui, plongez au cœur de Gayville, une petite localité qui incarne l'esprit rural du Dakota du Sud. L'après-midi sera consacrée à la découverte des paysages hivernaux le long du fleuve Missouri, offrant des panoramas uniques et une tranquillité apaisante. Une journée pour apprécier la simplicité et la beauté naturelle de la région.",
+      "lieu": "Gayville / Yankton",
+      "activites": [
+        "🏘️ <strong>Découverte de Gayville</strong>: Explorez le petit village de Gayville, à quelques minutes de Yankton. Admirez les quelques bâtiments historiques et ressentez l'atmosphère d'une petite communauté américaine.",
+        "🌉 <strong>Traversée du Meridian Bridge à Yankton</strong>: Marchez sur le \"Meridian Bridge\", un ancien pont ferroviaire transformé en passerelle piétonne. Il offre des vues imprenables sur le fleuve Missouri et les environs gelés.",
+        "🏞️ <strong>Vues Hivernales au Lewis & Clark Recreation Area</strong>: Visitez le \"Lewis & Clark Recreation Area\" pour admirer le lac gelé et les paysages enneigés. C'est un endroit idéal pour une courte promenade revigorante et des photos mémorables."
+      ],
+      "illustration": "jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "📸",
+          "titre": "Photographie",
+          "texte": "Les paysages hivernaux du Missouri sont spectaculaires. N'oubliez pas votre appareil photo pour capturer la beauté gelée des lieux."
+        },
+        {
+          "symbole": "☕",
+          "titre": "Pause Chaleur",
+          "texte": "Après les activités extérieures, réchauffez-vous dans un café local à Yankton avec une boisson chaude et une pâtisserie."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "🏛️",
+      "titre": "Histoire et Ingénierie sur le Fleuve",
+      "legende": "Cette journée vous emmène à travers l'histoire fascinante du Dakota du Sud et l'ingéniosité humaine. De la riche histoire territoriale de Yankton aux prouesses d'ingénierie du barrage de Gavins Point, vous découvrirez comment la région a été façonnée par son passé et son environnement. Une immersion culturelle et technique.",
+      "lieu": "Yankton",
+      "activites": [
+        "📜 <strong>Visite du Dakota Territorial Museum</strong>: Plongez dans l'histoire du Dakota du Sud au \"Dakota Territorial Museum\" à Yankton. Découvrez des expositions sur les pionniers, les Amérindiens et la période territoriale.",
+        "⚙️ <strong>Exploration du Gavins Point Dam</strong>: Admirez l'impressionnant barrage de \"Gavins Point Dam\" sur le fleuve Missouri. Apprenez-en davantage sur son rôle dans la régulation du fleuve et la production d'énergie.",
+        "🐟 <strong>Découverte de la Gavins Point National Fish Hatchery</strong>: Visitez l'écloserie nationale de poissons, située près du barrage. C'est une opportunité intéressante de comprendre les efforts de conservation de la faune aquatique locale."
+      ],
+      "illustration": "jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "💡",
+          "titre": "Le Saviez-vous?",
+          "texte": "Yankton fut la première capitale territoriale du Dakota de 1861 à 1883, un fait souvent méconnu de l'histoire américaine."
+        },
+        {
+          "symbole": "📚",
+          "titre": "Musées",
+          "texte": "Le \"Dakota Territorial Museum\" offre une perspective unique sur la vie des colons et des tribus natives de la région."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "🎶",
+      "titre": "Musique, Art et Panoramas Hivernaux",
+      "legende": "Aujourd'hui, l'itinéraire vous mène à Vermillion, une ville universitaire abritant un trésor musical. L'après-midi sera dédiée à l'exploration des paysages naturels environnants, offrant des vues panoramiques sur la prairie enneigée. Une journée équilibrée entre culture et nature, typique du Dakota du Sud.",
+      "lieu": "Vermillion / Yankton",
+      "activites": [
+        "🎻 <strong>Immersion au National Music Museum (Vermillion)</strong>: Visitez le \"National Music Museum\" à Vermillion (environ 30 min de Yankton), abritant une collection exceptionnelle d'instruments de musique historiques du monde entier. Une véritable caverne d'Ali Baba pour les mélomanes.",
+        "⛰️ <strong>Randonnée Légère à Spirit Mound Historic Prairie</strong>: Faites une courte randonnée (si les conditions le permettent) jusqu'au sommet de \"Spirit Mound Historic Prairie\". Ce site, visité par Lewis et Clark, offre une vue panoramique sur la prairie enneigée et le fleuve Missouri.",
+        "🖼️ <strong>Galerie d'Art de l'Université du Dakota du Sud</strong>: Explorez la galerie d'art de l'Université du Dakota du Sud à Vermillion. Elle présente souvent des œuvres d'artistes locaux et régionaux, offrant un aperçu de la scène artistique locale."
+      ],
+      "illustration": "jour4.jpg",
+      "encarts": [
+        {
+          "symbole": "🎓",
+          "titre": "Ambiance Universitaire",
+          "texte": "Vermillion, ville de l'Université du Dakota du Sud, offre une atmosphère jeune et dynamique, contrastant avec le calme rural."
+        },
+        {
+          "symbole": "🚶‍♀️",
+          "titre": "Conseil Randonnée",
+          "texte": "Pour \"Spirit Mound\", assurez-vous d'avoir des chaussures de marche robustes et chaudes, car le sentier peut être glissant en hiver."
+        },
+        {
+          "symbole": "🌐",
+          "titre": "Site Web",
+          "texte": "Pour plus d'informations sur le musée, visitez le site officiel: https://www.nmmusd.org/"
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "🏙️",
+      "titre": "Évasion Urbaine à Sioux Falls",
+      "legende": "Aujourd'hui, échappez à la tranquillité rurale pour une journée d'exploration urbaine à Sioux Falls, la plus grande ville du Dakota du Sud. Découvrez son parc emblématique, ses institutions culturelles et son centre-ville animé. Une journée pour apprécier le dynamisme de la ville et ses attractions variées.",
+      "lieu": "Sioux Falls",
+      "activites": [
+        "🏞️ <strong>Découverte de Falls Park</strong>: Visitez le \"Falls Park\", le cœur de Sioux Falls, où la rivière Big Sioux cascade sur des roches de quartzite rose. C'est un spectacle impressionnant, même en hiver, avec des formations de glace.",
+        "🎭 <strong>Exploration du Washington Pavilion</strong>: Plongez dans la culture au \"Washington Pavilion of Arts and Science\". Ce complexe abrite un musée des sciences, un planétarium et des galeries d'art, parfait pour une après-midi au chaud.",
+        "🛍️ <strong>Flânerie dans le Centre-Ville Historique</strong>: Promenez-vous dans le charmant centre-ville de Sioux Falls, avec ses bâtiments historiques, ses boutiques indépendantes et ses restaurants. Profitez-en pour faire du shopping ou prendre un café."
+      ],
+      "illustration": "jour5.jpg",
+      "encarts": [
+        {
+          "symbole": "🗺️",
+          "titre": "Distance",
+          "texte": "Sioux Falls est à environ 1h30 de route de Yankton. Prévoyez une journée complète pour cette excursion."
+        },
+        {
+          "symbole": "🎨",
+          "titre": "Art Public",
+          "texte": "Le centre-ville de Sioux Falls est réputé pour ses sculptures publiques, notamment le programme \"SculptureWalk\" qui expose des œuvres d'art en plein air."
+        },
+        {
+          "symbole": "🌐",
+          "titre": "Infos Tourisme",
+          "texte": "Pour plus d'informations sur la ville, consultez: https://www.visitsiouxfalls.com/"
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "🏡",
+      "titre": "Charme Local et Détente Rurale",
+      "legende": "Après l'effervescence de Sioux Falls, cette journée est dédiée à la détente et à l'exploration du charme rural des petites villes du Dakota du Sud. Découvrez des boutiques d'antiquités, savourez la cuisine locale et imprégnez-vous de l'atmosphère paisible de la région. Une journée pour ralentir et apprécier la vie locale.",
+      "lieu": "Yankton / Environs",
+      "activites": [
+        "🏺 <strong>Chasse aux Trésors dans les Boutiques d'Antiquités</strong>: Explorez les boutiques d'antiquités de Yankton ou des villes voisines comme Springfield. Vous pourriez y dénicher des objets uniques et des souvenirs authentiques de la prairie.",
+        "🍽️ <strong>Déjeuner dans un Diner Local</strong>: Savourez un déjeuner typique américain dans un \"diner\" local. Goûtez aux spécialités régionales et profitez de l'ambiance conviviale et décontractée.",
+        "🌅 <strong>Coucher de Soleil sur le Missouri</strong>: Terminez la journée en admirant un magnifique coucher de soleil sur le fleuve Missouri. Les couleurs hivernales offrent un spectacle particulièrement saisissant et apaisant."
+      ],
+      "illustration": "jour6.jpg",
+      "encarts": [
+        {
+          "symbole": "🎁",
+          "titre": "Souvenirs",
+          "texte": "Les boutiques d'antiquités sont parfaites pour trouver des cadeaux originaux et des objets chargés d'histoire."
+        },
+        {
+          "symbole": "🍔",
+          "titre": "Cuisine Locale",
+          "texte": "Ne manquez pas de goûter au \"Runza\", une spécialité de la région, sorte de chausson fourré à la viande et au chou."
+        }
+      ]
+    },
+    {
+      "jour": 7,
+      "symbole": "👋",
+      "titre": "Derniers Regards et Préparation au Départ",
+      "legende": "Pour cette dernière journée complète, profitez d'une dernière immersion dans l'atmosphère du Dakota du Sud. Que ce soit par une dernière balade, l'achat de souvenirs ou la revisite d'un lieu coup de cœur, cette journée est l'occasion de faire vos adieux à cette région unique avant de prendre la route vers Sioux Falls pour votre vol retour. Préparez-vous pour le départ, la tête pleine de souvenirs.",
+      "lieu": "Yankton / Sioux Falls",
+      "activites": [
+        "🚶‍♀️ <strong>Dernière Balade Matinale à Yankton</strong>: Profitez d'une dernière promenade dans les rues de Yankton ou le long du fleuve. L'occasion de s'imprégner une dernière fois de l'ambiance paisible de la ville.",
+        "🛍️ <strong>Achats de Souvenirs Locaux</strong>: Faites vos derniers achats de souvenirs dans les boutiques de Yankton. Cherchez des produits artisanaux ou des spécialités locales à ramener chez vous.",
+        "✈️ <strong>Route vers Sioux Falls et Préparation</strong>: Reprenez la route vers Sioux Falls. Restituez votre véhicule de location à l'aéroport et préparez-vous pour votre vol de retour le lendemain, en vous remémorant les moments forts de votre voyage."
+      ],
+      "illustration": "jour7.jpg",
+      "encarts": [
+        {
+          "symbole": "⏰",
+          "titre": "Heure de Départ",
+          "texte": "Vérifiez l'heure de votre vol retour pour le lendemain et planifiez votre trajet vers l'aéroport en conséquence."
+        },
+        {
+          "symbole": "⛽",
+          "titre": "Plein d'Essence",
+          "texte": "N'oubliez pas de faire le plein de votre voiture de location avant de la rendre à l'aéroport pour éviter des frais supplémentaires."
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    {
+      "titre": "Budget vol:",
+      "legende": "1000€/pers (Vol A/R Foucheres-Sioux Falls, classe économique, avec escales)",
+      "symbole": "🛬"
+    },
+    {
+      "titre": "Budget transports:",
+      "legende": "450€/pers (Location voiture 7 jours + essence, base 2 pers)",
+      "symbole": "🚆"
+    },
+    {
+      "titre": "Budget repas:",
+      "legende": "420€/pers (7 jours, 60€/jour, repas variés ni économiques ni luxueux)",
+      "symbole": "🥗"
+    },
+    {
+      "titre": "Budget logement:",
+      "legende": "840€/pers (7 nuits en hôtel 3 étoiles, base 2 pers, 120€/nuit)",
+      "symbole": "🛏️"
+    },
+    {
+      "titre": "Budget activités:",
+      "legende": "150€/pers (Musées, parcs, petites excursions)",
+      "symbole": "🎭"
+    }
+  ],
+  "periodes_ideales": [
+    {
+      "titre": "Les périodes idéales pour ce séjour sont les mois de mai à septembre pour des températures plus clémentes et des activités de plein air.",
+      "symbole": "☀️"
+    },
+    {
+      "titre": "Pour une expérience hivernale authentique avec neige et froid, janvier est idéal, mais nécessite une bonne préparation.",
+      "symbole": "❄️"
+    }
+  ],
+  "infos_pratiques": [
+    {
+      "titre": "Le Dakota du Sud est un État peu peuplé des États-Unis, connu pour ses vastes prairies, ses formations rocheuses uniques et son histoire amérindienne. Gayville est une très petite localité rurale.",
+      "symbole": "🇺🇸"
+    },
+    {
+      "titre": "En janvier, les températures moyennes varient de -15°C à -5°C, avec des chutes de neige fréquentes. Les routes principales sont généralement dégagées, mais la prudence est de mise.",
+      "symbole": "🥶"
+    },
+    {
+      "titre": "Le pourboire est une pratique courante et attendue aux États-Unis (15-20% dans les restaurants, pour les chauffeurs, etc.).",
+      "symbole": "💸"
+    },
+    {
+      "titre": "Le Dakota du Sud est surnommé \"The Mount Rushmore State\", bien que le monument soit à plusieurs heures de route de Gayville. C'est un symbole fort de l'État.",
+      "symbole": "🗿"
+    }
+  ],
+  "liens_utiles": [
+    {
+      "legende": "Informations officielles sur le tourisme dans le Dakota du Sud",
+      "titre": "Travel South Dakota",
+      "url": "https://www.travelsouthdakota.com/",
+      "symbole": "📘"
+    },
+    {
+      "legende": "Informations touristiques sur la ville de Yankton",
+      "titre": "Visit Yankton",
+      "url": "https://www.visityanktonsd.com/",
+      "symbole": "ℹ️"
+    },
+    {
+      "legende": "Prévisions météorologiques pour le Dakota du Sud",
+      "titre": "National Weather Service",
+      "url": "https://www.weather.gov/",
+      "symbole": "🌤️"
+    }
+  ]
+}
