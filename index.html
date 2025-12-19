@@ -1,0 +1,470 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immersion Hivernale au Cœur du Dakota du Sud </title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      template: {
+                          sable: '#FFEDD5', 
+                          ocre: '#F97316',   // Orange Vibrant (Brand Accent)
+                          roche: '#0F172A',  // Bleu Nuit (Brand Dark)
+                          ciel: '#0D9488',   // Vert Lagon (Brand Primary)
+                          bg: '#FFF7ED'      // C'est un blanc cassé chaud, parfait pour la lecture et le contraste.
+                      }
+                  },
+                  fontFamily: {
+                      sans: ['"Plus Jakarta Sans"', 'sans-serif'], // Nouvelle police corps
+                      serif: ['"Outfit"', 'sans-serif'],           // Nouvelle police titres
+                  }
+              }
+          }
+      }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* 2. FORÇAGE DES GRAISSES (Comme sur la Landing Page) */
+        .font-sans { font-weight: 600 !important; }
+        .font-serif { font-weight: 800 !important; }
+
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #F97316; /* ocre */
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+    
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">MyTrip<span class="text-template-ocre">Planner</span></a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Arrivée à Yankton et Premiers Pas Hivernaux</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Cœur de Gayville et Majesté du Missouri</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Histoire et Ingénierie sur le Fleuve</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Musique, Art et Panoramas Hivernaux</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Évasion Urbaine à Sioux Falls</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Charme Local et Détente Rurale</a>
+            
+                <a href="#jour-7" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J7 Derniers Regards et Préparation au Départ</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://raw.githubusercontent.com/mytripplanner-dotfr/Gayville-etats-unis-q0720q03mj9e6ht/main/header.png" || 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021'}');">
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.2em] mb-4 uppercase text-xs font-bold">Feuille de Route</p>
+            <h1 class="font-serif text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">GAYVILLE- ETATS UNIS</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-medium max-w-2xl mx-auto leading-relaxed">Immersion Hivernale au Cœur du Dakota du Sud</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🗓️ Du 17 au 24 Janvier 2026</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">💰 2860€</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🛬 Environ 15h depuis Foucheres (via Paris CDG) avec 2 escales</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-16 relative">
+      <div class="text-center mb-16">
+            <h2 class="text-template-ocre font-bold tracking-normal text-4xl mt-2 uppercase font-serif">Votre Roadtrip</h2>
+      </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée à Yankton et Premiers Pas Hivernaux</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un long voyage, l'arrivée à Sioux Falls marque le début de votre aventure dans le Dakota du Sud. Une fois votre voiture de location récupérée, la route vers Yankton vous mènera à votre hôtel. Profitez de cette première soirée pour vous installer et découvrir l'ambiance paisible de cette ville bordant le majestueux fleuve Missouri, sous un manteau hivernal.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛬 <strong>Arrivée à Sioux Falls (FSD) et Transfert</strong>: Atterrissez à l'aéroport de Sioux Falls, récupérez votre véhicule de location et prenez la route vers Yankton (environ 1h30 de trajet), votre base pour ce séjour.</li><li>🛏️ <strong>Installation à l'Hôtel et Détente</strong>: Installez-vous confortablement dans votre hôtel 3 étoiles à Yankton. Prenez le temps de vous reposer après le vol et de vous familiariser avec les environs immédiats.</li><li>🚶‍♂️ <strong>Balade Légère sur le Riverwalk de Yankton</strong>: Profitez d'une courte promenade le long du "Riverwalk" de Yankton, offrant des vues sereines sur le fleuve Missouri, même en hiver. L'air frais et le calme sont parfaits pour se dégourdir les jambes.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Gayville-etats-unis-q0720q03mj9e6ht/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚗 Location de voiture</p>
+                                <p class="text-gray-700">Une voiture est indispensable pour explorer cette région peu desservie par les transports en commun. Prévoyez un véhicule adapté aux conditions hivernales.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌡️ Vêtements Chauds</p>
+                                <p class="text-gray-700">Janvier au Dakota du Sud est très froid. Emportez des couches de vêtements, un manteau épais, des gants, un bonnet et des chaussures imperméables.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Cœur de Gayville et Majesté du Missouri</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, plongez au cœur de Gayville, une petite localité qui incarne l'esprit rural du Dakota du Sud. L'après-midi sera consacrée à la découverte des paysages hivernaux le long du fleuve Missouri, offrant des panoramas uniques et une tranquillité apaisante. Une journée pour apprécier la simplicité et la beauté naturelle de la région.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🏘️ <strong>Découverte de Gayville</strong>: Explorez le petit village de Gayville, à quelques minutes de Yankton. Admirez les quelques bâtiments historiques et ressentez l'atmosphère d'une petite communauté américaine.</li><li>🌉 <strong>Traversée du Meridian Bridge à Yankton</strong>: Marchez sur le "Meridian Bridge", un ancien pont ferroviaire transformé en passerelle piétonne. Il offre des vues imprenables sur le fleuve Missouri et les environs gelés.</li><li>🏞️ <strong>Vues Hivernales au Lewis & Clark Recreation Area</strong>: Visitez le "Lewis & Clark Recreation Area" pour admirer le lac gelé et les paysages enneigés. C'est un endroit idéal pour une courte promenade revigorante et des photos mémorables.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Gayville-etats-unis-q0720q03mj9e6ht/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Photographie</p>
+                                <p class="text-gray-700">Les paysages hivernaux du Missouri sont spectaculaires. N'oubliez pas votre appareil photo pour capturer la beauté gelée des lieux.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">☕ Pause Chaleur</p>
+                                <p class="text-gray-700">Après les activités extérieures, réchauffez-vous dans un café local à Yankton avec une boisson chaude et une pâtisserie.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Histoire et Ingénierie sur le Fleuve</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Cette journée vous emmène à travers l'histoire fascinante du Dakota du Sud et l'ingéniosité humaine. De la riche histoire territoriale de Yankton aux prouesses d'ingénierie du barrage de Gavins Point, vous découvrirez comment la région a été façonnée par son passé et son environnement. Une immersion culturelle et technique.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>📜 <strong>Visite du Dakota Territorial Museum</strong>: Plongez dans l'histoire du Dakota du Sud au "Dakota Territorial Museum" à Yankton. Découvrez des expositions sur les pionniers, les Amérindiens et la période territoriale.</li><li>⚙️ <strong>Exploration du Gavins Point Dam</strong>: Admirez l'impressionnant barrage de "Gavins Point Dam" sur le fleuve Missouri. Apprenez-en davantage sur son rôle dans la régulation du fleuve et la production d'énergie.</li><li>🐟 <strong>Découverte de la Gavins Point National Fish Hatchery</strong>: Visitez l'écloserie nationale de poissons, située près du barrage. C'est une opportunité intéressante de comprendre les efforts de conservation de la faune aquatique locale.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Gayville-etats-unis-q0720q03mj9e6ht/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Le Saviez-vous?</p>
+                                <p class="text-gray-700">Yankton fut la première capitale territoriale du Dakota de 1861 à 1883, un fait souvent méconnu de l'histoire américaine.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📚 Musées</p>
+                                <p class="text-gray-700">Le "Dakota Territorial Museum" offre une perspective unique sur la vie des colons et des tribus natives de la région.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Musique, Art et Panoramas Hivernaux</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, l'itinéraire vous mène à Vermillion, une ville universitaire abritant un trésor musical. L'après-midi sera dédiée à l'exploration des paysages naturels environnants, offrant des vues panoramiques sur la prairie enneigée. Une journée équilibrée entre culture et nature, typique du Dakota du Sud.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🎻 <strong>Immersion au National Music Museum (Vermillion)</strong>: Visitez le "National Music Museum" à Vermillion (environ 30 min de Yankton), abritant une collection exceptionnelle d'instruments de musique historiques du monde entier. Une véritable caverne d'Ali Baba pour les mélomanes.</li><li>⛰️ <strong>Randonnée Légère à Spirit Mound Historic Prairie</strong>: Faites une courte randonnée (si les conditions le permettent) jusqu'au sommet de "Spirit Mound Historic Prairie". Ce site, visité par Lewis et Clark, offre une vue panoramique sur la prairie enneigée et le fleuve Missouri.</li><li>🖼️ <strong>Galerie d'Art de l'Université du Dakota du Sud</strong>: Explorez la galerie d'art de l'Université du Dakota du Sud à Vermillion. Elle présente souvent des œuvres d'artistes locaux et régionaux, offrant un aperçu de la scène artistique locale.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Gayville-etats-unis-q0720q03mj9e6ht/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎓 Ambiance Universitaire</p>
+                                <p class="text-gray-700">Vermillion, ville de l'Université du Dakota du Sud, offre une atmosphère jeune et dynamique, contrastant avec le calme rural.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚶‍♀️ Conseil Randonnée</p>
+                                <p class="text-gray-700">Pour "Spirit Mound", assurez-vous d'avoir des chaussures de marche robustes et chaudes, car le sentier peut être glissant en hiver.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌐 Site Web</p>
+                                <p class="text-gray-700">Pour plus d'informations sur le musée, visitez le site officiel: https://www.nmmusd.org/</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Évasion Urbaine à Sioux Falls</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, échappez à la tranquillité rurale pour une journée d'exploration urbaine à Sioux Falls, la plus grande ville du Dakota du Sud. Découvrez son parc emblématique, ses institutions culturelles et son centre-ville animé. Une journée pour apprécier le dynamisme de la ville et ses attractions variées.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🏞️ <strong>Découverte de Falls Park</strong>: Visitez le "Falls Park", le cœur de Sioux Falls, où la rivière Big Sioux cascade sur des roches de quartzite rose. C'est un spectacle impressionnant, même en hiver, avec des formations de glace.</li><li>🎭 <strong>Exploration du Washington Pavilion</strong>: Plongez dans la culture au "Washington Pavilion of Arts and Science". Ce complexe abrite un musée des sciences, un planétarium et des galeries d'art, parfait pour une après-midi au chaud.</li><li>🛍️ <strong>Flânerie dans le Centre-Ville Historique</strong>: Promenez-vous dans le charmant centre-ville de Sioux Falls, avec ses bâtiments historiques, ses boutiques indépendantes et ses restaurants. Profitez-en pour faire du shopping ou prendre un café.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Gayville-etats-unis-q0720q03mj9e6ht/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🗺️ Distance</p>
+                                <p class="text-gray-700">Sioux Falls est à environ 1h30 de route de Yankton. Prévoyez une journée complète pour cette excursion.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎨 Art Public</p>
+                                <p class="text-gray-700">Le centre-ville de Sioux Falls est réputé pour ses sculptures publiques, notamment le programme "SculptureWalk" qui expose des œuvres d'art en plein air.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌐 Infos Tourisme</p>
+                                <p class="text-gray-700">Pour plus d'informations sur la ville, consultez: https://www.visitsiouxfalls.com/</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Charme Local et Détente Rurale</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après l'effervescence de Sioux Falls, cette journée est dédiée à la détente et à l'exploration du charme rural des petites villes du Dakota du Sud. Découvrez des boutiques d'antiquités, savourez la cuisine locale et imprégnez-vous de l'atmosphère paisible de la région. Une journée pour ralentir et apprécier la vie locale.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🏺 <strong>Chasse aux Trésors dans les Boutiques d'Antiquités</strong>: Explorez les boutiques d'antiquités de Yankton ou des villes voisines comme Springfield. Vous pourriez y dénicher des objets uniques et des souvenirs authentiques de la prairie.</li><li>🍽️ <strong>Déjeuner dans un Diner Local</strong>: Savourez un déjeuner typique américain dans un "diner" local. Goûtez aux spécialités régionales et profitez de l'ambiance conviviale et décontractée.</li><li>🌅 <strong>Coucher de Soleil sur le Missouri</strong>: Terminez la journée en admirant un magnifique coucher de soleil sur le fleuve Missouri. Les couleurs hivernales offrent un spectacle particulièrement saisissant et apaisant.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Gayville-etats-unis-q0720q03mj9e6ht/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎁 Souvenirs</p>
+                                <p class="text-gray-700">Les boutiques d'antiquités sont parfaites pour trouver des cadeaux originaux et des objets chargés d'histoire.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🍔 Cuisine Locale</p>
+                                <p class="text-gray-700">Ne manquez pas de goûter au "Runza", une spécialité de la région, sorte de chausson fourré à la viande et au chou.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-7" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 7</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Derniers Regards et Préparation au Départ</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Pour cette dernière journée complète, profitez d'une dernière immersion dans l'atmosphère du Dakota du Sud. Que ce soit par une dernière balade, l'achat de souvenirs ou la revisite d'un lieu coup de cœur, cette journée est l'occasion de faire vos adieux à cette région unique avant de prendre la route vers Sioux Falls pour votre vol retour. Préparez-vous pour le départ, la tête pleine de souvenirs.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚶‍♀️ <strong>Dernière Balade Matinale à Yankton</strong>: Profitez d'une dernière promenade dans les rues de Yankton ou le long du fleuve. L'occasion de s'imprégner une dernière fois de l'ambiance paisible de la ville.</li><li>🛍️ <strong>Achats de Souvenirs Locaux</strong>: Faites vos derniers achats de souvenirs dans les boutiques de Yankton. Cherchez des produits artisanaux ou des spécialités locales à ramener chez vous.</li><li>✈️ <strong>Route vers Sioux Falls et Préparation</strong>: Reprenez la route vers Sioux Falls. Restituez votre véhicule de location à l'aéroport et préparez-vous pour votre vol de retour le lendemain, en vous remémorant les moments forts de votre voyage.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Gayville-etats-unis-q0720q03mj9e6ht/main/jour7.jpg" class="w-full h-64 object-cover" alt="Jour 7">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⏰ Heure de Départ</p>
+                                <p class="text-gray-700">Vérifiez l'heure de votre vol retour pour le lendemain et planifiez votre trajet vers l'aéroport en conséquence.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⛽ Plein d'Essence</p>
+                                <p class="text-gray-700">N'oubliez pas de faire le plein de votre voiture de location avant de la rendre à l'aéroport pour éviter des frais supplémentaires.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+    </section>
+
+    <section id="pratique" class="bg-white border-t border-gray-200 pt-12 pb-12 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget vol: </strong>1000€/pers (Vol A/R Foucheres-Sioux Falls, classe économique, avec escales)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget transports: </strong>450€/pers (Location voiture 7 jours + essence, base 2 pers)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget repas: </strong>420€/pers (7 jours, 60€/jour, repas variés ni économiques ni luxueux)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget logement: </strong>840€/pers (7 nuits en hôtel 3 étoiles, base 2 pers, 120€/nuit)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget activités: </strong>150€/pers (Musées, parcs, petites excursions)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Les périodes idéales pour ce séjour sont les mois de mai à septembre pour des températures plus clémentes et des activités de plein air.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Pour une expérience hivernale authentique avec neige et froid, janvier est idéal, mais nécessite une bonne préparation.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Infos pratiques
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🇺🇸 Le Dakota du Sud est un État peu peuplé des États-Unis, connu pour ses vastes prairies, ses formations rocheuses uniques et son histoire amérindienne. Gayville est une très petite localité rurale.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🥶 En janvier, les températures moyennes varient de -15°C à -5°C, avec des chutes de neige fréquentes. Les routes principales sont généralement dégagées, mais la prudence est de mise.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">💸 Le pourboire est une pratique courante et attendue aux États-Unis (15-20% dans les restaurants, pour les chauffeurs, etc.).</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🗿 Le Dakota du Sud est surnommé "The Mount Rushmore State", bien que le monument soit à plusieurs heures de route de Gayville. C'est un symbole fort de l'État.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>🔗</span> Liens Utiles
+                </h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://mytripplanner-dotfr.github.io/Gayville-etats-unis-q0720q03mj9e6ht/map.html" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🗺️ Carte Interactive</strong></a></li>
+                    
+                        <li><a href="https://www.travelsouthdakota.com/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>📘 Travel South Dakota</strong></a></li>
+                    
+                        <li><a href="https://www.visityanktonsd.com/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>ℹ️ Visit Yankton</strong></a></li>
+                    
+                        <li><a href="https://www.weather.gov/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🌤️ National Weather Service</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-6">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="font-serif text-lg text-template-roche mb-2 font-bold">
+                MyTrip<span class="text-template-ocre">Planner</span>
+            </p>
+
+                <div class="flex justify-center gap-4 text-[10px] md:text-xs text-slate-500 mb-4 font-semibold">
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Mentions Légales</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">CGU</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Confidentialité</a>
+                </div>
+
+            <p class="text-[10px] text-gray-400 mb-2">
+                &copy; 2025 MyTripPlanner. Tous droits réservés.
+            </p>
+
+            <div class="flex justify-center">
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest px-2 py-0.5 border border-gray-200 rounded-full inline-block">
+                    🤖 Contenu généré par IA
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion Scroll & Menu
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+
+        // Active Link Highlighter
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -60% 0px' });
+
+        document.querySelectorAll('div[id^="jour-"], section#pratique').forEach(s => observer.observe(s));
+    </script>
+</body>
+</html>
